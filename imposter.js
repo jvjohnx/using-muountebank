@@ -1,5 +1,6 @@
 /*Fluent api to create an imposter programattically
 Info from Testing Microservices with Mounteban by Brandon Byars
+https://github.com/bbyars/mountebank-in-action
 */
 
 require('any-promise/register/q');                  //1
