@@ -42,3 +42,12 @@ module.exports = function (options) {               //2
     create: create
   };
 };
+
+/*
+1 node.js libraries that make calling HTTP services easier
+2 The node.js way of exposing a function to different files
+3 Calls the REST API to create an imposter
+4 The entry point to the fluent interface—each call creates a new stub
+5 Adds a new request predicate to the stub
+6 Adds a new response to the stub
+*/
