@@ -1,6 +1,6 @@
 In Mountebank, the stringify function within EJS templates is used to include the content of a file directly into the imposter configuration as a string. 
 
-ere's how it generally works:
+Here's how it generally works:
 
  *    Syntax: <%- stringify(filename, 'path/to/file') %>.
  *    Purpose: It reads the content of the specified file and inserts it into the template as a string, escaping newlines and other special characters appropriately, according to liveBook · Manning.
@@ -19,16 +19,16 @@ how do install imposters.ejs
 
  2.  Example imposters.ejs:
 ejs
-
+```
 {
   "imposters": [
     <%= include('imposters/myFirstImposter.ejs') %>,
     <%= include('imposters/mySecondImposter.ejs') %>
   ]
 }
-
+```
  3.  Define individual imposters in separate files: Create separate EJS files for each of your imposters (e.g., myFirstImposter.ejs, mySecondImposter.ejs in the imposters subdirectory).
-
+```
 {
   "port": 3000,
   "protocol": "http",
@@ -52,11 +52,10 @@ ejs
     }
   ]
 }
-
-
+```
 
  4.  Start Mountebank with the configuration file: Run Mountebank from your terminal, pointing it to your imposters.ejs file using the --configfile flag
-Command: mb --configfile imposters.ejs --allowInjection
+Command: ```mb --configfile imposters.ejs --allowInjection```
  --allowInjection: This flag is important when using EJS templating because it enables JavaScript injection within your templates, which Mountebank requires to parse and execute EJS directives like include.
 
  5.Verify the imposter(s): Once Mountebank is running, you can test your imposter(s) by sending requests to the configured ports and endpoints.
